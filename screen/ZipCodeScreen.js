@@ -22,7 +22,7 @@ const ZipItem = ({place, code,navigation}) => (
         navigation.navigate('Weather', { zipCode: code})}>
 
     <View style={styles.zipItem}>
-        <Text style={styles.textEditor}>{place}</Text>
+         <Text style={styles.textEditor}>{place}</Text>
     </View>
 </TouchableHighlight>
     )
@@ -40,6 +40,7 @@ export default function ZipCodeScreen(){
     </View>
     );
    }
+   
 const styles = StyleSheet.create({
     zipItem: {
         flex: 1,
