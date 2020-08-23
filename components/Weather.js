@@ -6,11 +6,11 @@ export default function Weather(props) {
     const [forecastInfo, setForecastInfo] = useState({
         main: 'main',
         description: 'description',
-        wind:0,      
+        name: 'name',
+        wind:0,
         temp: 0,
         tempMin: 'min',
         tempMax: 'max',
-
         }) 
     useEffect(() => {
         console.log(`fetching data with zipCode = ${props.zipCode}`)
@@ -25,6 +25,7 @@ export default function Weather(props) {
             temp: json.main.temp,
             tempMin:json.main.temp_min,
             tempMax:json.main.temp_max,
+            name:json.name,
         });
         })
         .catch((error) => {
@@ -36,8 +37,7 @@ export default function Weather(props) {
     
 
     return ( 
-        <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
-            <Text style={styles.nextFont}>Zip Code : {props.zipCode}</Text>
+        <ImageBackground style={styles.backdrop}>
             <Forecast {...forecastInfo}/>
         </ImageBackground>
  );
@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
  nextFont:{
      fontSize:20,
      margin:20,
+     alignItems: 'center',
      fontWeight: "bold",
 
 

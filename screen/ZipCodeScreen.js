@@ -11,8 +11,8 @@ const availableZipItems = [
     { place: 'Bangkok', code: '10100' },
     { place: 'Chonburi', code: '20000' },
     { place: 'Nakhon Sie Thammarat', code:'80000'},
-    { place: 'Phatthalung', code: '93000' },
-    { place: 'Pattani', code: '94000'},
+    { place: 'Phayao', code: '56000' },
+    { place: 'Krabi', code: '81000'},
     { place: 'Satun', code: '91000'},
     { place: 'Surat Thani', code: '84000' },
    ]
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     },
     textEditor:{
         fontWeight: "bold",
+        alignItems: 'center',
         color:'white',
         fontSize:25,
     },
@@ -66,6 +67,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#f7b733',
         height:'100%'
     }
-
+    
 
 })

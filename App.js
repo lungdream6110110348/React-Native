@@ -14,7 +14,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={ZipCodeScreen}/>
+        <Stack.Screen name="Temperature" component={ZipCodeScreen}/>
         <Stack.Screen name="Weather" component={WeatherScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
@@ -22,6 +22,8 @@ export default function App() {
  }
 const styles = StyleSheet.create({
  container: {
-    paddingTop: Constants.statusBarHeight,
+    alignItems:'center',
+    textAlign:'center'
  },
+
 });
