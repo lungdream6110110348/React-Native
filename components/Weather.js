@@ -6,6 +6,7 @@ export default function Weather(props) {
     const [forecastInfo, setForecastInfo] = useState({
         main: 'main',
         description: 'description',
+        windSpeed: 0,
         temp: 0
 
         }) 
@@ -31,7 +32,7 @@ export default function Weather(props) {
 
     return ( 
         <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
-            <Text style={styles.nextFont}>Zip Code is {props.zipCode}</Text>
+            <Text style={styles.nextFont}>Zip Code : {props.zipCode}</Text>
             <Forecast {...forecastInfo}/>
         </ImageBackground>
  );

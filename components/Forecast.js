@@ -23,6 +23,7 @@ export default function Forecast(props) {
     marText:{
         margin:30,
         color:'blue',
+        alignItems: 'center',
         fontSize:20,
         fontWeight:"bold",
         textAlign:'center'
