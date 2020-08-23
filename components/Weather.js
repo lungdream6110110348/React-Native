@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
      margin:20,
      alignItems: 'center',
      fontWeight: "bold",
-
+     
 
  }
 })

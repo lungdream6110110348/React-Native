@@ -41,7 +41,7 @@ export default function Forecast(props) {
         fontWeight: "bold",
         textAlign:'center',
         margin:20,
-        
+         
         
     },
     marText:{
