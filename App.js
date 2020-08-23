@@ -10,13 +10,17 @@ import WeatherScreen from './screen/WeatherScreen';
 
 const Stack = createStackNavigator();
 
+
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Temperature" component={ZipCodeScreen}/>
-        <Stack.Screen name="Weather" component={WeatherScreen}/>
-      </Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerTitleAlign: "center" }}>
+        <Stack.Screen name="Temperature" component={ZipCodeScreen}
+        options={{ headerStyle: { backgroundColor: "#FFD471" } }}/>
+        <Stack.Screen name="Weather" component={WeatherScreen}
+        options={{ headerStyle: { backgroundColor: "#FFD471" } }}/>
+        
+      </Stack.Navigator >
     </NavigationContainer>
   );
  }
@@ -25,5 +29,21 @@ const styles = StyleSheet.create({
     alignItems:'center',
     textAlign:'center'
  },
-
+ colorBG:{
+   backgroundColor:'orange',
+ }
 });
+{/* <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerTitleAlign: "center" }}>
+        <Stack.Screen
+          name="Home"
+          component={zipCodeScreen}
+          options={{ headerStyle: { backgroundColor: "#FFD471" } }}
+        />
+        <Stack.Screen
+          name="Weather"
+          component={WeatherScreen}
+          options={{ headerStyle: { backgroundColor: "#FFD471" } }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer> */}

@@ -26,8 +26,8 @@ export default function Forecast(props) {
     <Text style={styles.fontS}>Temperature Max</Text>
     </View>
     <View style={styles.down}>
-    <Text style={styles.marText}>{props.tempMin}</Text>
-    <Text style={styles.marText}>{props.tempMax}</Text>
+    <Text style={styles.marText}>{props.tempMin}°C</Text>
+    <Text style={styles.marText}>{props.tempMax}°C</Text>
     </View>
      </ImageBackground>
     </View>
@@ -61,7 +61,7 @@ export default function Forecast(props) {
        flexDirection: 'column',
        width: 1000,
        height: '100%',
-       resizeMode: 'stretch'
+       resizeMode: 'stretch',
    
    
     },
@@ -100,12 +100,12 @@ export default function Forecast(props) {
     },
     down:{
         flexDirection:'row',
-        paddingLeft:0,
-        paddingRight:0,
+        paddingLeft:10,
+        paddingRight:10,
         color:'black',
-        fontSize:40,
+        fontSize:50,
         fontWeight:"bold",
-        justifyContent:'space-evenly'
+        justifyContent:'space-around'
     },
     header:{
         margin:20,
@@ -114,6 +114,11 @@ export default function Forecast(props) {
         fontSize:40,
         fontWeight:"bold",
         textAlign:'center'
+    },
+    back:{
+        backgroundColor:'black',
+        
+        opacity:0.6,
     }
    })
    
